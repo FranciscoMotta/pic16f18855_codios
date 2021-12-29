@@ -1690,9 +1690,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 1600 ]
 "88
-[; ;main.c: 88:         } while (PORTAbits.RA5);
+[; ;main.c: 88:         } while (!PORTAbits.RA5);
 }
-[e $ != -> . . _PORTAbits 0 5 `i -> 0 `i 1577  ]
+[e $ ! != -> . . _PORTAbits 0 5 `i -> 0 `i 1577  ]
 [e :U 1576 ]
 "89
 [; ;main.c: 89:     }

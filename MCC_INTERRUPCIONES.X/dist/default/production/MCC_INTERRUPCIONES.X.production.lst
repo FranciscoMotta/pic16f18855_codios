@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Wed Dec 29 12:00:51 2021
+                                                                                               Wed Dec 29 12:05:55 2021
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	16F18855
@@ -2404,8 +2404,8 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2385  07F5  1116               	bcf	22,2	;volatile
   2386  07F6                     l810:
   2387                           
-  2388                           ;main.c: 88:         } while (PORTAbits.RA5);
-  2389  07F6  1A8C               	btfsc	12,5	;volatile
+  2388                           ;main.c: 88:         } while (!PORTAbits.RA5);
+  2389  07F6  1E8C               	btfss	12,5	;volatile
   2390  07F7  2FF9               	goto	u51
   2391  07F8  2FFA               	goto	u50
   2392  07F9                     u51:
@@ -3045,7 +3045,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Wed Dec 29 12:00:51 2021
+Symbol Table                                                                                   Wed Dec 29 12:05:55 2021
 
                              l31 07E9                               l24 07D8                               l26 07DA  
                              l18 07A5                               l71 076A                               l74 0761  

@@ -69,7 +69,7 @@ void main(void) {
         /*CODIGO DE SEMAFORO ACTIVADOR POR PULSADOR POLLING*/
 START:
         if (S2_GetValue())goto START;
-SECUENCIA:
+SECUENCIA: // CPU OCUPADA - EL POLLING DEPENDE DE LAS ACCIONES QUE HAGA EL CPU
         do {
             VERDE_SetHigh();
             __delay_ms(2500);
@@ -85,7 +85,7 @@ SECUENCIA:
             __delay_ms(2500);
             ROJO_SetLow();
             // Add your application code
-        } while (S2_GetValue());
+        } while (!S2_GetValue());
     }
 }
 /**

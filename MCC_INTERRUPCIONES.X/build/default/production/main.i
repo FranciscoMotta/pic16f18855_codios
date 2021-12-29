@@ -19905,6 +19905,6 @@ SECUENCIA:
             _delay((unsigned long)((2500)*(1000000/4000.0)));
             do { LATAbits.LATA2 = 0; } while(0);
 
-        } while (PORTAbits.RA5);
+        } while (!PORTAbits.RA5);
     }
 }
