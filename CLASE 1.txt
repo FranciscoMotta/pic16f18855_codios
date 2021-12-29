@@ -1,0 +1,17 @@
+REGISTRO DE CONTROL DEL OSCILADOR
+
+-OSCCON1: Configuración del tipo de Oscilador y el divisor del mismo
+-OSCCON2: Registro solo de lectura. Indica el oscilador y el 
+divisor de clock actual.
+-OSCCON3: Configuración y monitoreo del clock Switching.
+-OSCFREQ: Connfiguramos la frecuencia del oscilador interno elegido
+-OSCEN: Habilitación explícita y manual de los osciladores.
+
+// EJERCICIO: Configurar un oscilador del tipo HFINTOSC con div de 4, con clock swithing activado
+sin hold y a una frecuecia de 4mhz.
+
+	CODE:
+	OSCCON1 = 0X62; // HFINTOSC con Div(4)
+	OSCCON2 = 0X00; // Switching Clock hasta nuevo osc listo
+	OSCFRQ = 0X02; // Frecuencia de 4MHZ
+
